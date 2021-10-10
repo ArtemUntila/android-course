@@ -8,3 +8,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Android Course"
 include ':lab01'
+include ':lab02'
+include ':lab02:continuewatch'
