@@ -16,6 +16,7 @@ class MainActivityPref : AppCompatActivity()  {
     var secondsElapsed: Int = 0
     lateinit var textSecondsElapsed: TextView
     lateinit var sPref: SharedPreferences
+    var status = false
 
     var backgroundThread = Thread {
         while (true) {
@@ -45,12 +46,14 @@ class MainActivityPref : AppCompatActivity()  {
     override fun onPause() {
         super.onPause()
         Log.i(TAG, "paused")
+        status = false
         sPref.edit().putInt(SECONDS_STATE, secondsElapsed).apply()
     }
 
     override fun onResume() {
         super.onResume()
         Log.i(TAG, "resumed")
+        status = true
         secondsElapsed = sPref.getInt(SECONDS_STATE, 0)
     }
 

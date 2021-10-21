@@ -10,3 +10,8 @@ rootProject.name = "Android Course"
 include ':lab01'
 include ':lab02'
 include ':lab02:continuewatch'
+include ':lab03'
+include ':lab03:task2'
+include ':lab03:task3'
+include ':lab03:task4'
+include ':lab03:task5'
