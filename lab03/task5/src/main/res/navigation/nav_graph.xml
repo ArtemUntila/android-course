@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_fragment_1_to_fragment_2"
             app:destination="@id/fragment_2" />
-        <action
-            android:id="@+id/action_fragment_1_to_about"
-            app:destination="@id/about" />
     </fragment>
 
     <fragment
@@ -31,9 +28,6 @@
         <action
             android:id="@+id/action_fragment_2_to_fragment_3"
             app:destination="@id/fragment_3" />
-        <action
-            android:id="@+id/action_fragment_2_to_about"
-            app:destination="@id/about" />
     </fragment>
 
     <fragment
@@ -41,7 +35,6 @@
         android:name="me.artyom.androidcourse.lab03.task5.Fragment3"
         android:label="Activity 3"
         tools:layout="@layout/fragment_3" >
-
         <action
             android:id="@+id/action_fragment_3_to_fragment_2"
             app:destination="@id/fragment_2"
@@ -52,15 +45,16 @@
             app:destination="@id/fragment_1"
             app:popUpTo="@+id/fragment_1"
             app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_fragment_3_to_about"
-            app:destination="@id/about" />
     </fragment>
 
     <activity
         android:id="@+id/about"
         android:name="me.artyom.androidcourse.lab03.task5.ActivityAbout"
         tools:layout="@layout/about"/>
+
+    <action
+        android:id="@+id/open_about"
+        app:destination="@id/about"/>
 
 
 </navigation>

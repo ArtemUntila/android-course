@@ -35,7 +35,7 @@ class Fragment3 : Fragment() {
         }
 
         toMenu.setOnClickListener {
-            navController.navigate(R.id.action_fragment_3_to_about)
+            navController.navigate(R.id.open_about)
         }
 
         return view
