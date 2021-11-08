@@ -9,28 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidCourse">
+
         <activity
             android:name=".Activity1"
             android:exported="true"
-            android:theme="@style/Theme.AndroidCourse.NoActionBar">
+            android:label="Activity 1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activity2"
             android:exported="true"
-            android:theme="@style/Theme.AndroidCourse.NoActionBar" />
+            android:label="Activity 2" />
+
         <activity
             android:name=".Activity3"
             android:exported="true"
-            android:theme="@style/Theme.AndroidCourse.NoActionBar" />
+            android:label="Activity 3" />
+
         <activity
-            android:name=".ActivityAbout"
-            android:exported="true"
-            android:theme="@style/Theme.AndroidCourse.NoActionBar" />
+            android:name=".AboutActivity"
+            android:label="Activity About" />
     </application>
 
 </manifest>

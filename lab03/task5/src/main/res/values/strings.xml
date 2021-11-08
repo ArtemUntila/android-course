@@ -1,8 +1,11 @@
 <resources>
     <string name="app_name">task5</string>
+
     <string name="to_first">to first</string>
     <string name="to_second">to second</string>
     <string name="to_third">to third</string>
+
+    <string name="about_title">About</string>
     <string name="about_text">
         Nothing interesting\n
         Go back
