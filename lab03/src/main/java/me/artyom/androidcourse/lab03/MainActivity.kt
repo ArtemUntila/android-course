@@ -8,8 +8,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import me.artyom.androidcourse.lab03.task5.R
-import me.artyom.androidcourse.lab03.task5.databinding.ActivityMainBinding
+import me.artyom.androidcourse.lab03.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
