@@ -36,9 +36,9 @@ open class BaseActivity : AppCompatActivity() {
         binding.navView.setupWithNavController(navController)
 
         //Activity visible buttons
-        toFirst = findViewById(R.id.toFirst)
-        toSecond = findViewById(R.id.toSecond)
-        toThird = findViewById(R.id.toThird)
+        toFirst = findViewById(R.id.bnToFirst)
+        toSecond = findViewById(R.id.bnToSecond)
+        toThird = findViewById(R.id.bnToThird)
     }
 
     override fun onSupportNavigateUp() =

@@ -1,4 +1,4 @@
-package me.artyom.androidcourse.lab03.task5
+package me.artyom.androidcourse.lab03.task2
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -7,17 +7,23 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 
 fun firstIsDisplayed() {
     mainIsDisplayed()
-    idIsDisplayed(R.id.fragment1)
+    idIsGONE(R.id.bnToFirst)
+    idIsDisplayed(R.id.bnToSecond)
+    idIsGONE(R.id.bnToThird)
 }
 
 fun secondIsDisplayed() {
     mainIsDisplayed()
-    idIsDisplayed(R.id.fragment2)
+    idIsDisplayed(R.id.bnToFirst)
+    idIsGONE(R.id.bnToSecond)
+    idIsDisplayed(R.id.bnToThird)
 }
 
 fun thirdIsDisplayed() {
     mainIsDisplayed()
-    idIsDisplayed(R.id.fragment3)
+    idIsDisplayed(R.id.bnToFirst)
+    idIsDisplayed(R.id.bnToSecond)
+    idIsGONE(R.id.bnToThird)
 }
 
 fun mainIsDisplayed() = idIsDisplayed(R.id.drawer_layout)
@@ -35,10 +41,6 @@ fun fromFirstToThird() {
     toThird()
 }
 
-fun pressBackFromActionBar() {
-    onView(withContentDescription(R.string.abc_action_bar_up_description)).perform(click())
-}
-
 fun idIsDisplayed(id: Int) {
     onView(withId(id)).check(matches(isDisplayed()))
 }
@@ -47,3 +49,6 @@ fun idClick(id: Int) {
     onView(withId(id)).perform(click())
 }
 
+fun idIsGONE(id: Int) {
+    onView(withId(id)).check(matches(withEffectiveVisibility(Visibility.GONE)))
+}
