@@ -1,26 +1,17 @@
 package me.artyom.androidcourse.lab03.task3
 
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
+import android.view.ViewStub
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import me.artyom.androidcourse.lab03.task3.databinding.ActivityMainBinding
 
-open class BaseActivity : AppCompatActivity() {
+open class BaseActivity(private val layoutResource: Int) : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var navController: NavController
-
-    lateinit var toFirst: Button
-    lateinit var toSecond: Button
-    lateinit var toThird: Button
+    lateinit var binding: ActivityMainBinding
+    lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,23 +19,12 @@ open class BaseActivity : AppCompatActivity() {
         // NavigationDrawer
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         navController = findNavController(R.id.nav_host_fragment)
-        appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
-
-        setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
 
-        //Activity visible buttons
-        toFirst = findViewById(R.id.bnToFirst)
-        toSecond = findViewById(R.id.bnToSecond)
-        toThird = findViewById(R.id.bnToThird)
-    }
-
-    override fun onSupportNavigateUp() =
-        navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-
-    fun Button.disappear() {
-        this.visibility = View.GONE
+        // Variable Layout
+        val stub = findViewById<ViewStub>(R.id.view_stub)
+        stub.layoutResource = layoutResource
+        stub.inflate()
     }
 }

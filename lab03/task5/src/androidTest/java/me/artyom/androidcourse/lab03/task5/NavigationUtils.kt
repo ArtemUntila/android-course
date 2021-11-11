@@ -46,4 +46,3 @@ fun idIsDisplayed(id: Int) {
 fun idClick(id: Int) {
     onView(withId(id)).perform(click())
 }
-

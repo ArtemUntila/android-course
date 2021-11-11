@@ -22,7 +22,8 @@ open class BaseActivity(private val layoutResource: Int) : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment)
         binding.navView.setupWithNavController(navController)
 
-        val stub = findViewById<ViewStub>(R.id.viewStub)
+        // Variable Layout
+        val stub = findViewById<ViewStub>(R.id.view_stub)
         stub.layoutResource = layoutResource
         stub.inflate()
     }

@@ -2,13 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/hostFragment">
+    app:startDestination="@id/fragment_host">
 
     <activity
         android:id="@+id/aboutActivity"
         android:name="me.artyom.androidcourse.lab03.task3.AboutActivity" />
 
     <fragment
-        android:id="@+id/hostFragment"
+        android:id="@+id/fragment_host"
         android:name="me.artyom.androidcourse.lab03.task3.HostFragment" />
 </navigation>

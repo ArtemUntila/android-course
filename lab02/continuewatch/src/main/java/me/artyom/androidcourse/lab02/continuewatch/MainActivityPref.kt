@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 
 class MainActivityPref : AppCompatActivity()  {
+
     companion object {
         const val TAG = "MainActivity"
         const val SECONDS_STATE = "me.artyom.androidcourse.lab02.continuewatch.secondsElapsed"
@@ -35,6 +36,7 @@ class MainActivityPref : AppCompatActivity()  {
         setContentView(R.layout.activity_main)
         textSecondsElapsed = findViewById(R.id.textSecondsElapsed)
         sPref = getPreferences(MODE_PRIVATE)
+        textSecondsElapsed.text = "${textSecondsElapsed.text}${sPref.getInt(SECONDS_STATE, 0)}"
         backgroundThread.start()
     }
 

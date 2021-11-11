@@ -13,7 +13,6 @@ class Activity2 : BaseActivity(R.layout.fragment_2) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //toSecond.disappear()
 
         findViewById<Button>(R.id.bnToFirst).setOnClickListener { finish() }
 

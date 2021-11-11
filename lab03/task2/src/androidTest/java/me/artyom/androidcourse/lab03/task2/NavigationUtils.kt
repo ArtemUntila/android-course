@@ -7,23 +7,17 @@ import androidx.test.espresso.matcher.ViewMatchers.*
 
 fun firstIsDisplayed() {
     mainIsDisplayed()
-    idIsGONE(R.id.bnToFirst)
-    idIsDisplayed(R.id.bnToSecond)
-    idIsGONE(R.id.bnToThird)
+    idIsDisplayed(R.id.fragment1)
 }
 
 fun secondIsDisplayed() {
     mainIsDisplayed()
-    idIsDisplayed(R.id.bnToFirst)
-    idIsGONE(R.id.bnToSecond)
-    idIsDisplayed(R.id.bnToThird)
+    idIsDisplayed(R.id.fragment2)
 }
 
 fun thirdIsDisplayed() {
     mainIsDisplayed()
-    idIsDisplayed(R.id.bnToFirst)
-    idIsDisplayed(R.id.bnToSecond)
-    idIsGONE(R.id.bnToThird)
+    idIsDisplayed(R.id.fragment3)
 }
 
 fun mainIsDisplayed() = idIsDisplayed(R.id.drawer_layout)
@@ -42,7 +36,7 @@ fun fromFirstToThird() {
 }
 
 fun pressBackFromActionBar() {
-    onView(withContentDescription(R.string.nav_app_bar_navigate_up_description)).perform(click())
+    onView(withContentDescription(R.string.abc_action_bar_up_description)).perform(click())
 }
 
 fun idIsDisplayed(id: Int) {
@@ -51,8 +45,4 @@ fun idIsDisplayed(id: Int) {
 
 fun idClick(id: Int) {
     onView(withId(id)).perform(click())
-}
-
-fun idIsGONE(id: Int) {
-    onView(withId(id)).check(matches(withEffectiveVisibility(Visibility.GONE)))
 }
