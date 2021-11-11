@@ -124,6 +124,39 @@ class NavigationTest {
         secondIsDisplayed()
     }
 
+    @Test
+    fun testActionBarNavigation() {
+        scenario = launchActivity()
+
+        //First
+        openAbout()
+        pressBackFromActionBar()
+        firstIsDisplayed()
+
+        //Second
+        toSecond()
+        openAbout()
+        pressBackFromActionBar()
+        secondIsDisplayed()
+        pressBackFromActionBar()
+        firstIsDisplayed()
+        pressBackFromFirst()
+
+        scenario = launchActivity()
+
+        //Third
+        fromFirstToThird()
+        openAbout()
+        pressBackFromActionBar()
+        thirdIsDisplayed()
+        pressBackFromActionBar()
+        secondIsDisplayed()
+        toThird()
+        toSecond()
+        pressBackFromActionBar()
+        firstIsDisplayed()
+    }
+
     private fun pressBackFromFirst() {
         pressBackUnconditionally() // avoid Exception
         Thread.sleep(1000)

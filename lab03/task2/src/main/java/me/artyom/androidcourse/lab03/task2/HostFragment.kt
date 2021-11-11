@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 
 class HostFragment : Fragment() {
 
-    override fun onCreateView(
+    override fun onCreateView (
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?

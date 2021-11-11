@@ -6,7 +6,7 @@
 
     <activity
         android:id="@+id/aboutActivity"
-        android:name="me.artyom.androidcourse.lab03.task2.AboutActivity"/>
+        android:name="me.artyom.androidcourse.lab03.task2.AboutActivity" />
 
     <fragment
         android:id="@+id/hostFragment"

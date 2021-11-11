@@ -41,6 +41,10 @@ fun fromFirstToThird() {
     toThird()
 }
 
+fun pressBackFromActionBar() {
+    onView(withContentDescription(R.string.nav_app_bar_navigate_up_description)).perform(click())
+}
+
 fun idIsDisplayed(id: Int) {
     onView(withId(id)).check(matches(isDisplayed()))
 }
