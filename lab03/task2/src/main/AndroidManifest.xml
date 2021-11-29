@@ -13,7 +13,8 @@
         <activity
             android:name=".Activity1"
             android:exported="true"
-            android:label="Activity 1">
+            android:label="Activity 1"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,11 +22,17 @@
             </intent-filter>
         </activity>
 
+        <!-- launchMode="singleTop" avoids Activity re-creation if such already exists in backstack
+        it is helpful for navigate up action in task2 and task3-->
+
+        <!--android:launchMode="singleTop" is not needed in Activity 3,
+        because ActivityAbout overrides onNavigateUp with finish()-->
         <activity
             android:name=".Activity2"
             android:exported="true"
             android:label="Activity 2"
-            android:parentActivityName=".Activity1" />
+            android:parentActivityName=".Activity1"
+            android:launchMode="singleTop" />
 
         <activity
             android:name=".Activity3"
